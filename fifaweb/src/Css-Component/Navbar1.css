@@ -1,0 +1,30 @@
+
+.navbar1{
+
+    background-color: rgb(70, 0, 101);
+    color: white;
+}
+
+.navList1{
+
+    display: flex;
+    list-style-type: none;
+}
+
+.navList1 .nav1Iteam{
+
+    margin-left: 1100px;
+}
+
+.nav1Iteam1, .nav1Iteam2, .nav1Iteam3{
+    margin-left: 10px;
+}
+
+.navbar1{
+
+    
+    padding: 4px;
+}
+
+
+
