@@ -1,0 +1,31 @@
+
+
+.conatiner{
+
+    display: flex;
+    justify-content: center;
+    border: 2px solid green
+}
+
+.outerBor{
+
+    height: 40rem;
+    width: 40rem;
+    border: 2px solid red;
+    margin-top: 4rem;
+    display: flex;
+}
+
+.displayBar{
+
+    height: 6.5rem;
+    width: 40rem;
+    border: 2px solid black;
+}
+
+.numBox{
+
+    height: 10px;
+    width: 10px;
+    border: 2px solid black;
+}

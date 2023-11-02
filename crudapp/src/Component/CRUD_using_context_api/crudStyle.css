@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Libre+Baskerville:wght@700&display=swap');
+
+.addEmployeeBtn{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 60px;
+    margin-top: 90px;
+}
+
+.topHead{
+
+    margin-top: 20px;
+    margin-bottom: 60px;
+    font-family: sans-serif;
+}
+
+.empAction{
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-between; */
+    padding: 0px;
+}
+
+.empAction button{
+    margin: 5px;
+    width: 100px;
+
+}
