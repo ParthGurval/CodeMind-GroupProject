@@ -1,37 +1,34 @@
-import logo from './logo.svg';
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Products from "./ShoppingCart/Products";
+import "bootstrap/dist/css/bootstrap.min.css";
 
+//import classes from react-router-dom library
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+  Route,
+} from "react-router-dom";
 
+//import components from react-router
+import NavBar from "./ShoppingCart/NavBar";
+import Dashboard from "./ShoppingCart/Dashboard";
+import Cart from "./ShoppingCart/Cart";
 
-//import react router dom component
-import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
-import AddEmployee from './Component/CRUD_using_context_api/AddEmployee'
-import EmployeeList from './Component/CRUD_using_context_api/EmployeeList.jsx'
-import EditEmployee from './Component/CRUD_using_context_api/EditEmployee';
-import EmployeeView from './Component/CRUD_using_context_api/EmployeeView';
-
-import { EmployeeProvider } from './Component/CRUD_using_context_api/EmployeeStore';
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<NavBar />}>
+      <Route index element={<Dashboard />}></Route>
+      <Route path="/cart" element={<Cart />}></Route>
+    </Route>
+  )
+);
 
 function App() {
-
-
-
   return (
     <div className="App">
-
-
-      <Router>
-        <EmployeeProvider>
-          <Routes>
-            <Route exact path='/' element={<EmployeeList/>}></Route>
-            <Route exact path='/addEmployee' element={<AddEmployee/>}> </Route>
-            <Route  exact path='/editEmployee/:id' element={<EditEmployee/>}></Route> 
-            <Route path="/viewEmployee/:id" element={<EmployeeView />} />
-          </Routes>
-        </EmployeeProvider>
-        
-      </Router>
+      <RouterProvider router={router} />
     </div>
   );
 }
